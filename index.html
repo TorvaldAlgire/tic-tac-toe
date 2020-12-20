@@ -4,35 +4,56 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Tic Tac Toe</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Tic Tac Toe</h1>
-            <div class="row border-b">
-                <div class="col border-r"></div>
-                <div class="col border-r"></div>
-                <div class="col"></div>             
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tic Tac Toe</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="comp.js" async defer></script>
+    <script src="human.js" async defer></script>
+    <script>
+        (funciton setup() {
+    humanGame = new HumanGame();
+    compGame = new CompGame();
+        }())
+    </script>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div class="row border-b">
+            <div class="col border-r"></div>
+            <div class="col border-r"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row border-b">
+            <div class="col border-r"></div>
+            <div class="col border-r"></div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col border-r"></div>
+            <div class="col border-r"></div>
+            <div class="col"></div>
+        </div>
+        <div class="game-type">
+            <div class="comp">
+                <input type="radio" name="game-choice" class="game-choice" id="comp" value="comp" onclick="humanGame">
+                <label for="comp">Play Against Computer</label>
             </div>
-            <div class="row border-b">
-                <div class="col border-r"></div>
-                <div class="col border-r"></div>
-                <div class="col"></div>             
-            </div>
-            <div class="row">
-                <div class="col border-r"></div>
-                <div class="col border-r"></div>
-                <div class="col"></div>             
+            <div class="human">
+                <input type="radio" name="game-choice" class="game-choice" id="human" value="human" onclick="compGame">
+                <label for="human">Play Against Human</label>
             </div>
         </div>
-        
-        
-        <script src="script.js" async defer></script>
-    </body>
+    </div>
+
+    
+    
+</body>
+
 </html>

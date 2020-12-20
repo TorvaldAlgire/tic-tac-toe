@@ -36,3 +36,19 @@ h1 {
 .winner {
     color: blue;
 }
+
+.game-type {
+    padding-top: 40px; 
+}
+
+.comp {
+    justify-content: center;
+    align-content: center;
+    padding-left: 60px;
+}
+
+.human {
+    justify-content: center;
+    align-content: center;
+    padding-left: 60px;
+}
