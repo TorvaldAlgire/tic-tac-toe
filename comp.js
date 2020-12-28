@@ -1,4 +1,5 @@
 function CompGame() {
+    console.log("compGame");
     const board = new Board();
     const humanPlayer = new HumanPlayer(board);
     const computerPlayer = new ComputerPlayer(board);
@@ -12,17 +13,20 @@ function CompGame() {
     }
 
     function takeTurn() {
-        if (board.checkForWinner()) {
-            return;
+        if (board.checkForWinner() === true) {
+            location.reload();
+            
         }
-
-
         if (turn % 2 === 0) {
             humanPlayer.takeTurn();
         } else {
             computerPlayer.takeTurn();
         }
         turn++;
+
+        if (turn >= 10) {
+            location.reload();
+        }
     }
 }
 

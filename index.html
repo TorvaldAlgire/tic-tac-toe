@@ -17,12 +17,8 @@
 <body>
     <script src="comp.js" async defer></script>
     <script src="human.js" async defer></script>
-    <script>
-        (funciton setup() {
-    humanGame = new HumanGame();
-    compGame = new CompGame();
-        }())
-    </script>
+    <script src="game.js" async defer></script>
+
     <div class="container">
         <h1>Tic Tac Toe</h1>
         <div class="row border-b">
@@ -42,11 +38,11 @@
         </div>
         <div class="game-type">
             <div class="comp">
-                <input type="radio" name="game-choice" class="game-choice" id="comp" value="comp" onclick="humanGame">
+                <input type="radio" name="game-choice" class="game-choice" id="comp" value="comp">
                 <label for="comp">Play Against Computer</label>
             </div>
             <div class="human">
-                <input type="radio" name="game-choice" class="game-choice" id="human" value="human" onclick="compGame">
+                <input type="radio" name="game-choice" class="game-choice" id="human" value="human">
                 <label for="human">Play Against Human</label>
             </div>
         </div>

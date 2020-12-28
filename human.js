@@ -1,4 +1,5 @@
 function HumanGame() {
+    console.log("humanGame");
     const board = new Board();
     const player1 = new Player1(board);
     const player2 = new Player2(board);
@@ -12,8 +13,8 @@ function HumanGame() {
     }
 
     function takeTurn() {
-        if (board.checkForWinner()) {
-            return;
+        if (board.checkForWinner() === true) {
+            location.reload();
         }
 
 
@@ -23,6 +24,10 @@ function HumanGame() {
             player2.takeTurn();
         }
         turn++;
+
+        if (turn >= 10) {
+            location.reload();
+        }
     }
 }
 
@@ -59,6 +64,7 @@ function Board() {
                 winningCombo.forEach((index) => {
                     positions[index].className += ' winner'; //if there is no space here then the class is not appended.
                 })
+
             }
         });
 
